@@ -1,0 +1,391 @@
+@charset "UTF-8";
+/*А этот пойдет*/
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=cyrillic-ext");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+/*Шапка*/
+.logo {
+  width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+  /*border: 4px double black;*/
+  /*background-color: $colorGreen;*/
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1a8425+0,00ff0c+100 */
+  background: #f4e2bc;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f4e2bc 0%, #b2a482 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f4e2bc", endColorstr="#b2a482",GradientType=0 );
+  /* IE6-9 */
+  padding: 10px 0 10px 0;
+}
+
+.logoImg {
+  display: block;
+  margin: 0 auto;
+}
+
+.bottom-header {
+  width: 100%;
+  min-height: 50px;
+  background-color: #f7f7f7;
+  /*border: 4px double black;*/
+}
+
+.actions-header {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.actions-header li {
+  margin: 10px auto;
+}
+.actions-header__login {
+  padding: 0px 0px 0px 36px;
+  background: url("../img/login.png") left no-repeat;
+  display: inline-block;
+  line-height: 24px;
+  color: #ac9b7d;
+}
+.actions-header__login span {
+  border-bottom: 1px dotted;
+}
+.actions-header__reg {
+  padding: 0px 0px 0px 36px;
+  background: url("../img/reg.png") left no-repeat;
+  background-size: 24px 24px;
+  display: inline-block;
+  line-height: 24px;
+  color: #ac9b7d;
+}
+.actions-header__reg span {
+  border-bottom: 1px dotted;
+}
+.actions-header__cart {
+  padding: 0px 0px 0px 36px;
+  background: url("../img/cart1.png") left no-repeat;
+  background-size: 28px 28px;
+  display: inline-block;
+  line-height: 24px;
+  color: #ac9b7d;
+}
+.actions-header__cart span {
+  border-bottom: 1px dotted;
+}
+.actions-header a:hover {
+  color: #3d3815;
+  /* Цвет ссылки */
+  transition: all 0.3s;
+}
+
+/*Меню*/
+.page {
+  padding: 0px 0px 0px 50px;
+  flex: 1px 1px auto;
+  margin: 20px 0px 0px 0px;
+}
+.page__container {
+  display: flex;
+}
+.page__side {
+  flex: 0px 0px 260px;
+}
+.page__content {
+  font-family: "Roboto";
+  flex: 1 1 auto;
+  flex: 0px 0px 0px 30px;
+  margin: 0px 0px 0px 15px;
+}
+
+.menu-page {
+  font-family: "Roboto";
+  background-color: #ac9b7d;
+}
+.menu-page__header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.menu-page__title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+}
+.menu-page__body {
+  min-width: 300px;
+}
+.menu-page__list li {
+  border-bottom: 1px solid #fff;
+}
+.menu-page__link {
+  letter-spacing: 0.3px;
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  padding: 12px 20px;
+  position: relative;
+}
+.menu-page__link:hover {
+  background-color: #3d3815;
+  transition: all 0.3s;
+}
+
+.catalog {
+  flex: 1 0 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.cell {
+  padding: 20px;
+  flex: 0 0 calc( 25% - 30px );
+  min-width: 95%;
+  display: flex;
+  flex-direction: row;
+  margin: 0px 10px 10px 10px;
+  border: 2px solid #f4e2bc;
+}
+
+.cell__inside {
+  flex: 1;
+  padding: 0px 20px 0px 0px;
+  min-height: 400px;
+}
+
+aside + .catalog .cell {
+  flex: 0 0 calc( 33% - 30px );
+}
+
+.cell__inside img {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+  max-height: 350px;
+  transition: transform 0.4s ease-out;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cell__wrap {
+  margin: 0 auto;
+  background: white;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: Lora;
+}
+
+.product__item {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.cell__wrap img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product__title {
+  color: #5e5e5e;
+  margin: 0 auto;
+}
+
+.product__title h1 {
+  font-family: "Roboto";
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 600;
+  margin: 15px 0 5px;
+  padding-bottom: 7px;
+  display: block;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.product__price {
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #ac9b7d;
+  font-weight: 700;
+}
+
+----- p {
+  text-align: center;
+}
+
+sup {
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 55px;
+}
+
+.title__name {
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.buttonBuy {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ac9b7d;
+  font-size: 16px;
+  font-family: "Roboto";
+  font-weight: 400;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  margin: 20px 0px 0px 0px;
+  width: 150px;
+  height: 40px;
+  background: #ac9b7d;
+  border: 1px solid #ac9b7d;
+  color: #FFF;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.buttonBuy:hover {
+  text-decoration: none;
+  color: #ac9b7d;
+  border-color: #ac9b7d;
+  background: #FFF;
+}
+
+.buttonBuy:active {
+  background-color: #808080;
+}
+
+.buttonBuy span {
+  display: inline-block;
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.3s;
+}
+
+.cell__name {
+  margin: 0px 0px 10px 0px;
+}
+
+.cell__name p {
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: bold;
+  color: #ac9b7d;
+  width: 250px;
+  display: block;
+  margin: 0px auto;
+}
+
+@media (min-width: 980px) {
+  .cell-inside {
+    width: 340px;
+  }
+}
+@media screen and (max-device-width: 980px) {
+  .title__name h1 {
+    text-transform: uppercase;
+  }
+
+  .cell-inside, .cell__wrap, .product__item {
+    width: 340px;
+  }
+}
+.title__name h1 {
+  text-transform: uppercase;
+}
+
+@media screen and (max-device-width: 860px) {
+  .cell-inside, .cell__wrap, .product__item {
+    width: 295px;
+  }
+}
+.product__discription {
+  font-family: "Roboto";
+  font-size: 14px;
+  margin: 0px 0px 10px 0px;
+}

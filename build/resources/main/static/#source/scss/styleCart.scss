@@ -1,0 +1,130 @@
+//Файл обнуление стилей. Этот комментарий не пойдет в файл style.css
+/*А этот пойдет*/
+@import "reset_style.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=cyrillic-ext');
+ $font-family: "Roboto";
+
+
+$colorGreen:#00e600;
+
+
+/*Шапка*/
+
+.logo{
+  width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+  /*border: 4px double black;*/
+  /*background-color: $colorGreen;*/
+
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1a8425+0,00ff0c+100 */
+background: #1a8425; 
+background: -moz-linear-gradient(top,  #1a8425 0%, #00ff0c 100%); 
+background: -webkit-linear-gradient(top,  #1a8425 0%,#00ff0c 100%); 
+background: linear-gradient(to bottom,  #1a8425 0%,#00ff0c 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a8425', endColorstr='#00ff0c',GradientType=0 ); 
+
+  padding: 10px 0 10px 0;
+}
+.logoImg{
+  display:block;
+  margin: 0 auto;
+}
+.bottom-header{
+    width: 100%;
+    min-height: 50px;
+    background-color: #f7f7f7;
+    /*border: 4px double black;*/
+}
+
+
+
+ .catalog{
+      margin: 20px;
+      flex: 1 0 70%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+    .cell {
+      padding: 15px;
+      flex: 0 0 calc( 25% - 30px );
+      min-width: 300px;
+      display: flex;
+      flex-direction: row;
+
+      margin: 0px 10px 10px 10px;
+      border: 2px solid #b5e9a7;
+    }
+    .cell_inside {
+      
+    flex: 1;
+    padding: 0px;
+    min-height: 140px;//Just in case you dont have enough content
+
+    }
+    aside + .catalog .cell {
+      flex: 0 0 calc( 33% - 30px );
+    }
+    .cell_inside img {
+  
+  max-width: 150px;
+  max-height: 150px;
+  
+  transition: transform .4s ease-out;
+}
+* {box-sizing: border-box;}
+.product-wrap {
+
+  width: 150px;
+  margin: 0 auto;
+  background: white;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 14px; 
+  font-family: Lora;
+  text-transform: uppercase;
+}
+.product-item {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  height:150px;
+}
+.product-wrap img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.product-title {color: #5e5e5e;}
+.product-title p {
+  font-family: $font-family;
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 600;
+  margin: 15px 0 5px;
+  padding-bottom: 7px;
+  display: block;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+.product-price {
+font-family: $font-family;
+  font-size: 20px;
+  color: $colorGreen;
+  font-weight: 700;
+}
+
+-----
+
+p    { text-align: center;  }
+sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
+.wrapper__name{
+  width: 150px;
+  height:50px;
+}

@@ -1,0 +1,271 @@
+@charset "UTF-8";
+/*А этот пойдет*/
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=cyrillic-ext");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  font-family: "Roboto";
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+/*Шапка*/
+.logo {
+  width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+  /*border: 4px double black;*/
+  /*background-color: $colorGreen;*/
+  background: #f4e2bc;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f4e2bc 0%, #b2a482 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f4e2bc", endColorstr="#b2a482",GradientType=0 );
+  /* IE6-9 */
+  padding: 10px 0 10px 0;
+}
+
+.logoImg {
+  display: block;
+  margin: 0 auto;
+}
+
+/*label{
+  font-family: $font-family;
+  margin: 5px 22px;
+  color:#1a8425;
+  font-size: 18px;
+  font-weight: 500;
+}*/
+.wrapper-content__name {
+  margin: 10px 0px 0px 0px;
+}
+
+.name1, .name2, .name3 {
+  color: #3d3815;
+  border: 2px solid #ac9b7d;
+  height: 50px;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 308px;
+  margin: 0px 0px 10px 0px;
+  transition: 0.3s;
+}
+
+.name1:focus, .name2:focus, .name3:focus {
+  box-shadow: 0px 0px 30px #f4e2bc;
+  transition: 0.3s;
+}
+
+.name h1 {
+  width: 280px;
+  margin: 30px auto;
+  color: #ac9b7d;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.address1 {
+  color: #3d3815;
+  border: 2px solid #ac9b7d;
+  height: 50px;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 200px;
+  margin: 0px 0px 10px 0px;
+  transition: 0.3s;
+}
+
+.address2 {
+  color: #3d3815;
+  border: 2px solid #ac9b7d;
+  height: 50px;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 50px;
+  margin: 0px 0px 10px 0px;
+  transition: 0.3s;
+}
+
+.address3 {
+  color: #3d3815;
+  border: 2px solid #ac9b7d;
+  height: 50px;
+  padding: 0 5px;
+  font-weight: bold;
+  font-size: 14px;
+  width: 50px;
+  margin: 0px 0px 10px 0px;
+  transition: 0.3s;
+}
+
+.address1:focus, .address2:focus, .address3:focus {
+  box-shadow: 0px 0px 30px #f4e2bc;
+  transition: 0.3s;
+}
+
+.wrapper-content {
+  width: 308px;
+  margin: 0 auto;
+}
+
+.wrapper-content h2 {
+  margin: 5px 0px;
+  color: #ac9b7d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.address:focus {
+  box-shadow: 0px 0px 30px #f4e2bc;
+  transition: 0.3s;
+}
+
+.wrapper-content__address {
+  width: 308px;
+  margin: 10px auto;
+  align-items: center;
+}
+
+.wrapper-content__button {
+  width: 150px;
+  margin: 30px auto;
+}
+
+.buttonsave {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ac9b7d;
+  font-size: 14px;
+  font-family: "Roboto";
+  font-weight: 400;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0px;
+  margin: 0px auto;
+  width: 150px;
+  height: 40px;
+  background: #ac9b7d;
+  border: 1px solid #ac9b7d;
+  color: #FFF;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.buttonsave:hover {
+  text-decoration: none;
+  color: #ac9b7d;
+  border-color: #ac9b7d;
+  background: #FFF;
+}
+
+.buttonsave:active {
+  background-color: #808080;
+}
+
+.buttonsave span {
+  display: inline-block;
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.3s;
+}
+
+.wrapper-content__select {
+  margin: 30px 0px 0px 0px;
+}
+
+.wrapper-content__list {
+  width: 308px;
+  margin: 10px auto;
+  align-items: center;
+  border: 2px solid #ac9b7d;
+  border-radius: 3px;
+}
+
+.list__elem {
+  height: 30px;
+  width: 290px;
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: #ac9b7d;
+}
+.list__elem span {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  width: 210px;
+  margin: 0 auto;
+  padding: 6px 0px 0px 0px;
+}

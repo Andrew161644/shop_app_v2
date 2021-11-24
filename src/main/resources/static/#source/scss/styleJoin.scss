@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/*А этот пойдет*/
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=cyrillic-ext");
+ $font-family: "Roboto";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  font-family: $font-family;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+/*Шапка*/
+$colorGreen:#00e600;
+.logo {
+  width: 100%;
+  min-height: 100px;
+  margin: 0 auto;
+  /*border: 4px double black;*/
+  /*background-color: $colorGreen;*/
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1a8425+0,00ff0c+100 */
+  background: #1a8425;
+  background: linear-gradient(to bottom, #1a8425 0%, #00ff0c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#1a8425", endColorstr="#00ff0c",GradientType=0 );
+  padding: 10px 0 10px 0;
+}
+
+.logoImg {
+  display: block;
+  margin: 0 auto;
+}
+
+.name h1{
+  width: 90px;
+  margin: 30px auto;
+  color: #00ff0c;
+  font-size: 40px;
+  font-weight: 500;
+}
+.account, .password
+{
+  color: #1a8425;
+  border: 2px solid #00ff0c;
+  height: 50px;
+  padding: 0 15px;
+  font-size: 18px;
+  width: 300px;
+  margin: 0px 0px 10px 0px;
+  transition: 0.3s;
+ 
+
+}
+
+
+.wrapper-content h2{
+  margin: 5px 0px;
+  color: #00ff0c;
+  font-size: 16px;
+  font-weight: 500;
+}
+.account:focus{
+  box-shadow: 0px 0px 30px rgba(181, 233, 167,0.8);
+  transition: 0.3s;
+}
+.password:focus
+{
+  box-shadow: 0px 0px 30px rgba(181, 233, 167,0.8);
+
+   transition: 0.3s;
+}
+
+.wrapper-content__pass,.wrapper-content__acc{
+  width: 300px;
+    margin: 0px auto;
+}
+.wrapper-content__button{
+  width: 150px;
+  margin: 25px auto;
+}
+.buttonjoin
+{
+  text-transform: uppercase;
+
+  text-align: center;
+  color: $colorGreen;
+
+  font-size: 16px;
+  font-family: $font-family;
+  font-weight: 400;
+  
+
+   
+  top:0; right:0; bottom:0; left: 0px;
+  
+
+  margin: 0px auto;
+  width: 150px;
+  height:40px;
+
+  background: $colorGreen;
+  border: 1px solid $colorGreen;
+  color: #FFF;
+  overflow: hidden;
+  
+  transition: all 0.3s;
+}
+
+.buttonjoin:hover
+{
+  text-decoration: none;
+  color: $colorGreen;
+  border-color: $colorGreen;
+  background: #FFF;
+}
+.buttonjoin:active{
+  background-color: #808080;
+}
+
+.buttonjoin span 
+{
+  display: inline-block;
+  position: relative;
+  padding-right: 0;
+  transition: padding-right 0.3s;
+
+}
