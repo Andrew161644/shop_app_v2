@@ -15,6 +15,8 @@ import io.ktor.sessions.*
 import io.ktor.util.pipeline.*
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import org.bson.BsonObjectId
+import org.bson.types.ObjectId
 import org.koin.core.Koin
 
 
@@ -32,6 +34,7 @@ open class OrderHandler() {
                 mainPage(koin)
                 return
             }
+            order._id = BsonObjectId(ObjectId())
             //save order
             orderService.saveNewOrder(order)
             //update user

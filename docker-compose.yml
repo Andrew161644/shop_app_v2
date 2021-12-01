@@ -1,22 +1,23 @@
 version: "3.9"
 services:
-  myapp:
-    build:
-      dockerfile: Dockerfile
-    container_name: "myapp"
-    environment:
-      - NODE_ENV=development
-      - mongohost=mongodb
-      - mongoport=27017
-    volumes:
-      - .:/var/www:rw
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
-    ports:
-      - 8081:8081
-    links:
-      - mongodb
-    depends_on:
-      - mongodb
+#  myapp:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    container_name: "myapp"
+#    environment:
+#      - NODE_ENV=development
+#      - mongohost=mongodb
+#      - mongoport=27017
+#    volumes:
+#      - .:/var/www:rw
+#      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+#    ports:
+#      - 8081:8081
+#    links:
+#      - mongodb
+#    depends_on:
+#      - mongodb
   mongodb:
     image: mongo
     container_name: "mongodb"

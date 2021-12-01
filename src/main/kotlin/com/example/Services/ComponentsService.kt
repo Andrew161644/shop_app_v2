@@ -55,28 +55,7 @@ class ComponentsService(val mongoDataService: MongoDataService,val categoriesSer
         }
     }
     fun getComponentsContainsName(name:String): List<ComponentImage>? {
-
-        var document = mongoDataService.database.getCollection(componentCollection).find(
-            Document("name",name)
-        )
-
-        if (document.first() == null) {
-
-            document = mongoDataService.database.getCollection(componentCollection).find(
-                regex("name", ".*${name}.*")
-            )
-            println(document.first())
-        }
-
-        if (document?.first() != null) {
-            val res=ArrayList<ComponentImage>()
-            val a = document.map{mongoDataService.mongoDocumentTransform(it)}
-            a.map { val a=ComponentImage.fromJson(it.values.first())
-                a._id=BsonObjectId(ObjectId(it.keys.first()))
-            a
-            }.forEach(res::add)
-            return res
-        }
-        return null
+        val cmp = getAllComponents()
+        return cmp.filter {it.name.lowercase().contains(name.lowercase())}
     }
 }
