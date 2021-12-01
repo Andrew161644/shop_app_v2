@@ -50,7 +50,7 @@ open class Routes() {
 
             post("/componentsName"){
                 val name=call.receiveParameters()["name"].orEmpty()
-                val res= koin.get<ComponentsService>().getComponentsContainsName(name)
+                val res = koin.get<ComponentsService>().getComponentsContainsName(name)
                 if (res != null) {
                     call.respond(res)
                 }
